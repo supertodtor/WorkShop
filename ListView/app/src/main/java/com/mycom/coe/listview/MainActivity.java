@@ -25,7 +25,8 @@ public class MainActivity extends AppCompatActivity {
                 "Item 1: Android",
                 "Item 2: iPhone ",
                 "Item 3: Windows Phone",
-                "Item 4: Custom Phone"
+                "Item 4: Custom Phone",
+                "Item 5: Nokia"
         };
 
         // Define a new Adapter
@@ -33,23 +34,24 @@ public class MainActivity extends AppCompatActivity {
         // Second parameter - Layout for the row
         // Third parameter - ID of the TextView to which the data is written (related to layout)
         // Forth - the Array of data
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_1, android.R.id.text1, values);
-        listView.setAdapter(adapter);
+//        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+//                android.R.layout.simple_list_item_1, android.R.id.text1, values);
+        Customadapter customAdapter = new Customadapter( getApplicationContext(), values  );
+        listView.setAdapter(customAdapter);
 
         //position starting from 0
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view,
-                                    int position, long id) {
-                String  itemValue    = (String) listView.getItemAtPosition(position);
-                Toast.makeText(getApplicationContext(),
-                        "Position :"+ position+"  ListItem : " +itemValue , Toast.LENGTH_LONG)
-                        .show();
-            }
-
-        });
+//        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view,
+//                                    int position, long id) {
+//                String  itemValue    = (String) listView.getItemAtPosition(position);
+//                Toast.makeText(getApplicationContext(),
+//                        "Position :"+ position+"  ListItem : " +itemValue , Toast.LENGTH_LONG)
+//                        .show();
+//            }
+//
+//        });
 
 
 
