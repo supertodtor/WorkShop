@@ -1,0 +1,7 @@
+#Sat Jul 29 15:34:29 ICT 2017
+base.0=D\:\\workshop\\androidExample\\ActivityExample\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_0326e52176d01df7707486b8f1739fbf2e53f959
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=D\:\\workshop\\androidExample\\ActivityExample\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_cf96ceeff0de059924006a28b96cfafad4dfc344\\classes.dex
+base.1=D\:\\workshop\\androidExample\\ActivityExample\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_cf96ceeff0de059924006a28b96cfafad4dfc344
+file.0=D\:\\workshop\\androidExample\\ActivityExample\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_0326e52176d01df7707486b8f1739fbf2e53f959\\classes.dex

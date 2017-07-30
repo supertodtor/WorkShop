@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "D:\\workshop\\androidExample\\ActivityExample\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\notification_action_background.xml",
+        "source": "C:\\Users\\coe\\.android\\build-cache\\aa36d3fc30ed9010da449c60cf5d65bc13559e4e\\output\\res\\drawable-v21\\notification_action_background.xml"
+    },
+    {
+        "merged": "D:\\workshop\\androidExample\\ActivityExample\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_action_bar_item_background_material.xml",
+        "source": "C:\\Users\\coe\\.android\\build-cache\\aa36d3fc30ed9010da449c60cf5d65bc13559e4e\\output\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
+    },
+    {
+        "merged": "D:\\workshop\\androidExample\\ActivityExample\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_btn_colored_material.xml",
+        "source": "C:\\Users\\coe\\.android\\build-cache\\aa36d3fc30ed9010da449c60cf5d65bc13559e4e\\output\\res\\drawable-v21\\abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "D:\\workshop\\androidExample\\ActivityExample\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_edit_text_material.xml",
+        "source": "C:\\Users\\coe\\.android\\build-cache\\aa36d3fc30ed9010da449c60cf5d65bc13559e4e\\output\\res\\drawable-v21\\abc_edit_text_material.xml"
+    }
+]
