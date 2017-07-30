@@ -14,6 +14,9 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "JavaFragment";
     private Button btnAdd;
     private Button btnRemove;
+    private Button btnOne;
+    private Button btnTwo;
+    private Button btnThree;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +24,47 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         startBlankFragment();
 
+        reMoveFragment();
+
+//        startJavaFragment();
+
+
+        btnOne = (Button)findViewById(R.id.btnOne);
+        btnTwo= (Button)findViewById(R.id.btnTwo);
+        btnThree = (Button)findViewById(R.id.btnThree);
+
+        btnOne.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.javaFragment,new OneFragment(),"OneFragment")
+                        .commit();
+            }
+        });
+
+        btnTwo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.javaFragment,new TwoFragment(),"TwoFragment")
+                        .commit();
+            }
+        });
+
+        btnThree.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.javaFragment,new ThreeFragment(),"ThreeFragment")
+                        .commit();
+            }
+        });
+    }
+
+    private void reMoveFragment() {
         btnAdd = (Button) findViewById(R.id.btnAdd);
         btnRemove = (Button) findViewById(R.id.btnRemove);
 
@@ -50,8 +94,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
-//        startJavaFragment();
     }
 
     private void startJavaFragment() {
