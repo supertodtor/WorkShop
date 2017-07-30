@@ -45,6 +45,10 @@ public class MainActivity extends AppCompatActivity {
 
         notification();
 
+        btnCancle();
+    }
+
+    private void btnCancle() {
         btnCancle = (Button)findViewById(R.id.btnCancle);
         btnCancle.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,12 +71,6 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                NotificationCompat.Builder mBuilder =
-                        (NotificationCompat.Builder) new NotificationCompat.Builder(MainActivity.this)
-                                .setSmallIcon(R.drawable.ic_stat_name)
-                                .setContentTitle("My notification")
-                                .setContentText("Open Google website!");
-
                 Intent resultIntent = new Intent(Intent.ACTION_VIEW,
                         Uri.parse("http://www.google.com/"));
 
@@ -85,7 +83,24 @@ public class MainActivity extends AppCompatActivity {
                                 // if a previous PendingIntent already exists,
                                 // then the current one will update it with the latest intent
                                 PendingIntent.FLAG_UPDATE_CURRENT);
+
+                NotificationCompat.Builder mBuilder =
+                        (NotificationCompat.Builder) new NotificationCompat
+                                .Builder(MainActivity.this)
+                                .setSmallIcon(R.drawable.ic_stat_name)
+                                .setContentTitle("My notification")
+                                .setContentText("Open Google website!")
+
+                                .setPriority(NotificationCompat.PRIORITY_HIGH)
+                                .setVibrate(new long[] {1000})
+
+                                .addAction(0,"Action",resultPendingIntent)
+                                .addAction(0,"Close",null)
+                                .setAutoCancel(true);
+
                 mBuilder.setContentIntent(resultPendingIntent);
+
+
 
                 NotificationManager mNotifyMgr =
                         (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
