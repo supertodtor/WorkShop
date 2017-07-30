@@ -26,7 +26,6 @@
         android:layout_height="wrap_content"
         android:text="Remove"/>
 
-
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -36,22 +35,34 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="One"/>
+
         <Button
             android:id="@+id/btnTwo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Two"/>
+
         <Button
-        android:id="@+id/btnThree"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Three"/>
+            android:id="@+id/btnThree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Three"/>
+
         <Button
-        android:id="@+id/btnBack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Back"/>
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"/>
+
+        <Button
+            android:id="@+id/btnNotification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Notification"/>
+
+
     </LinearLayout>
+
 
     <FrameLayout
         android:id="@+id/javaFragment"
