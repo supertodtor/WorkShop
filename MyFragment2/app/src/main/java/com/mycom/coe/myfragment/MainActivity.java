@@ -32,7 +32,11 @@ public class MainActivity extends AppCompatActivity {
 
         btnAdd();
 
-        btnBack = (Button)findViewById(R.id.btnBack);
+        btnBack();
+    }
+
+    private void btnBack() {
+        btnBack = (Button) findViewById(R.id.btnBack);
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -77,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 getSupportFragmentManager()
                         .beginTransaction()
-                        .replace(R.id.javaFragment, new ThreeFragment(), TAG)
+                        .replace(R.id.javaFragment,ThreeFragment.newInstance("Three"), TAG)
                         .addToBackStack(null)
                         .commit();
             }
