@@ -1,4 +1,4 @@
-package com.mycom.coe.sharedpreferences;
+package com.mycom.coe.threadexample;
 
 import org.junit.Test;
 

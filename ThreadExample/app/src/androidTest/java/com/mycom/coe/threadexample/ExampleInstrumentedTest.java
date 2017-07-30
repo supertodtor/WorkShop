@@ -1,4 +1,4 @@
-package com.mycom.coe.sharedpreferences;
+package com.mycom.coe.threadexample;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.mycom.coe.sharedpreferences", appContext.getPackageName());
+        assertEquals("com.mycom.coe.threadexample", appContext.getPackageName());
     }
 }
