@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void btnCancle() {
-        btnCancle = (Button)findViewById(R.id.btnCancle);
+        btnCancle = (Button) findViewById(R.id.btnCancle);
         btnCancle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -92,14 +92,13 @@ public class MainActivity extends AppCompatActivity {
                                 .setContentText("Open Google website!")
 
                                 .setPriority(NotificationCompat.PRIORITY_HIGH)
-                                .setVibrate(new long[] {1000})
+                                .setVibrate(new long[]{1000})
 
-                                .addAction(0,"Action",resultPendingIntent)
-                                .addAction(0,"Close",null)
+                                .addAction(0, "Action", resultPendingIntent)
+                                .addAction(0, "Close", null)
                                 .setAutoCancel(true);
 
                 mBuilder.setContentIntent(resultPendingIntent);
-
 
 
                 NotificationManager mNotifyMgr =
@@ -156,7 +155,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 getSupportFragmentManager()
                         .beginTransaction()
-                        .replace(R.id.javaFragment,ThreeFragment.newInstance("Three"), TAG)
+                        .replace(R.id.javaFragment, ThreeFragment.newInstance("Three"), TAG)
                         .addToBackStack(null)
                         .commit();
             }
