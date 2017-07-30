@@ -18,46 +18,65 @@
         android:id="@+id/btnAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add"/>
+        android:text="Add" />
 
     <Button
         android:id="@+id/btnRemove"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Remove"/>
-
+        android:text="Remove" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <Button
             android:id="@+id/btnOne"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="One"/>
+            android:text="One" />
+
         <Button
             android:id="@+id/btnTwo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Two"/>
+            android:text="Two" />
+
         <Button
-        android:id="@+id/btnThree"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Three"/>
+            android:id="@+id/btnThree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Three" />
+
         <Button
-        android:id="@+id/btnBack"
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back" />
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Back"/>
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnNotification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Notification" />
+        <Button
+            android:id="@+id/btnCancle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancle"/>
     </LinearLayout>
 
     <FrameLayout
         android:id="@+id/javaFragment"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
-    </FrameLayout>
+        android:layout_height="wrap_content"></FrameLayout>
 
 
 </LinearLayout>
