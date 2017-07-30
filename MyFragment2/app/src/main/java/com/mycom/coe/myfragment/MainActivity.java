@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btnOne;
     private Button btnTwo;
     private Button btnThree;
+    private Button btnBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,16 +30,33 @@ public class MainActivity extends AppCompatActivity {
 //        startJavaFragment();
 
 
-        btnOne = (Button)findViewById(R.id.btnOne);
-        btnTwo= (Button)findViewById(R.id.btnTwo);
-        btnThree = (Button)findViewById(R.id.btnThree);
+        btnAdd();
+
+        btnBack = (Button)findViewById(R.id.btnBack);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //onBackPressed();
+                Fragment fragment = getSupportFragmentManager().findFragmentByTag(TAG);
+                if (fragment != null) {
+                    getSupportFragmentManager().popBackStack();
+                }
+            }
+        });
+    }
+
+    private void btnAdd() {
+        btnOne = (Button) findViewById(R.id.btnOne);
+        btnTwo = (Button) findViewById(R.id.btnTwo);
+        btnThree = (Button) findViewById(R.id.btnThree);
 
         btnOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 getSupportFragmentManager()
                         .beginTransaction()
-                        .replace(R.id.javaFragment,new OneFragment(),"OneFragment")
+                        .replace(R.id.javaFragment, new OneFragment(), TAG)
+                        .addToBackStack(null)
                         .commit();
             }
         });
@@ -48,7 +66,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 getSupportFragmentManager()
                         .beginTransaction()
-                        .replace(R.id.javaFragment,new TwoFragment(),"TwoFragment")
+                        .replace(R.id.javaFragment, new TwoFragment(), TAG)
+                        .addToBackStack(null)
                         .commit();
             }
         });
@@ -58,7 +77,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 getSupportFragmentManager()
                         .beginTransaction()
-                        .replace(R.id.javaFragment,new ThreeFragment(),"ThreeFragment")
+                        .replace(R.id.javaFragment, new ThreeFragment(), TAG)
+                        .addToBackStack(null)
                         .commit();
             }
         });
