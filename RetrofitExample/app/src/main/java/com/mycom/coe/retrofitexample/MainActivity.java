@@ -45,6 +45,10 @@ public class MainActivity extends AppCompatActivity {
         httpManager = HttpManager.getInstance();
         gitHubService = HttpManager.getService();
 
+        Picasso.with(MainActivity.this)
+                .load("https://assets-cdn.github.com/images/modules/logos_page/Octocat.png")
+                .resize(1000, 800)
+                .into(imDisplay);
 
         serVice();
 
@@ -63,7 +67,10 @@ public class MainActivity extends AppCompatActivity {
                         if (response.isSuccessful()) {
                             gitHubUser = response.body();
                             Toast.makeText(getApplicationContext(), gitHubUser.toString(), Toast.LENGTH_SHORT).show();
-                            Picasso.with(MainActivity.this).load(gitHubUser.getImage()).resize(800, 800).into(imDisplay);
+                            Picasso.with(MainActivity.this)
+                                    .load(gitHubUser.getImage())
+                                    .resize(800, 800)
+                                    .into(imDisplay);
                             tvDisplay.setText(gitHubUser.toString());
                         } else {
                             try {
