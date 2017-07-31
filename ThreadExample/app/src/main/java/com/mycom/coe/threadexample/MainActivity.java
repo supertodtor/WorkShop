@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     class MyTask extends AsyncTask<String, Integer, String> {
         @Override
         protected String doInBackground(String... strings) {
-            while (i++ < 100 )
+            while (i++ < 100)
                 try {
                     Thread.sleep(500);
                     System.out.println(i);
@@ -70,28 +70,28 @@ public class MainActivity extends AppCompatActivity {
         thread = new Thread() {
             @Override
             public void run() {
-                while (i++ < 100 )
+                while (i++ < 100)
                     try {
                         Thread.sleep(500);
                         System.out.println(i);
                         Message m = new Message();
                         m.arg1 = i;
 //                        handler.sendMessage(m);
-                        handler.sendMessageDelayed(m,3000);
+                        handler.sendMessageDelayed(m, 3000);
 //                        handler.sendEmptyMessage(0);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
-                        return ;
+                        return;
                     }
             }
         };
         thread.start();
 
-        handler = new Handler(Looper.getMainLooper()){
+        handler = new Handler(Looper.getMainLooper()) {
             @Override
             public void handleMessage(Message msg) {
                 super.handleMessage(msg);
-                tvNum.setText("Counter: " +  msg.arg1 );
+                tvNum.setText("Counter: " + msg.arg1);
             }
         };
     }
